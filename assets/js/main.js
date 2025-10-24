@@ -21,6 +21,8 @@ const translations = {
     "nav.about": "About",
     "nav.experience": "Experience",
     "nav.services": "Services",
+    "nav.skills": "Skills",
+    "nav.achievements": "Achievements",
     "nav.projects": "Projects",
     "nav.testimonials": "Testimonials",
     "nav.contact": "Contact",
@@ -49,6 +51,9 @@ const translations = {
     "hero.metrics.1": "CI/CD Advocate",
     "hero.metrics.2": "API Steward",
     "hero.metrics.3": "Incident Responder",
+    "hero.stat1": "% Uptime",
+    "hero.stat2": "% Faster APIs",
+    "hero.stat3": "x Deploy Speed",
     "hero.portraitAlt": "Portrait of Hisham Hashem Ali Alshareef",
     "hero.scrollCue": "Scroll to highlights",
     "highlights.title": "Impact Highlights",
@@ -117,21 +122,15 @@ const translations = {
     "services.card3.bullet3": "Team enablement & documentation",
     "skills.title": "Core Skills",
     "skills.subtitle": "Tooling and capabilities that accelerate delivery and keep systems steady.",
-    "skills.column1.title": "Engineering",
-    "skills.column1.item1": "Django & Django REST Framework",
-    "skills.column1.item2": "Python automation & scripting",
-    "skills.column1.item3": "API design and documentation",
-    "skills.column1.item4": "Dockerized deployments",
-    "skills.column2.title": "Operations",
-    "skills.column2.item1": "CI/CD pipeline implementation",
-    "skills.column2.item2": "Performance profiling & tuning",
-    "skills.column2.item3": "Security hardening & threat mitigation",
-    "skills.column2.item4": "Network & server administration",
-    "skills.column3.title": "Collaboration",
-    "skills.column3.item1": "Technical coaching & documentation",
-    "skills.column3.item2": "Stakeholder communication",
-    "skills.column3.item3": "Cross-functional alignment",
-    "skills.column3.item4": "Analytical problem solving",
+    "skills.column1.title": "Backend Development",
+    "skills.column1.subtitle1": "Frameworks & Languages",
+    "skills.column1.subtitle2": "Databases & Storage",
+    "skills.column2.title": "DevOps & Infrastructure",
+    "skills.column2.subtitle1": "Containerization & Orchestration",
+    "skills.column2.subtitle2": "CI/CD & Monitoring",
+    "skills.column3.title": "Security & Performance",
+    "skills.column3.subtitle1": "Security Practices",
+    "skills.column3.subtitle2": "Performance & Testing",
     "skills.tag1": "RPA",
     "skills.tag2": "Git & GitHub",
     "skills.tag3": "Firebase",
@@ -153,6 +152,20 @@ const translations = {
       "Diagnosed integration issues rapidly, protecting the platform's uptime and credibility.",
     "projects.card.bullet5":
       "Continuously tuned application performance and hardened security posture.",
+    "achievements.title": "Key Achievements",
+    "achievements.subtitle": "Measurable impact in fintech backend development and system reliability.",
+    "achievements.card1.title": "35% API Performance Boost",
+    "achievements.card1.text": "Optimized Django REST APIs and database queries, reducing average response time from 450ms to 290ms.",
+    "achievements.card1.metric": "Avg Response Time",
+    "achievements.card2.title": "Zero Security Breaches",
+    "achievements.card2.text": "Implemented comprehensive security measures including OAuth 2.0, JWT tokens, and data encryption.",
+    "achievements.card2.metric": "Security Score",
+    "achievements.card3.title": "4x Faster Deployments",
+    "achievements.card3.text": "Built CI/CD pipelines with Docker and GitHub Actions, reducing deployment time from 2 hours to 30 minutes.",
+    "achievements.card3.metric": "Deploy Time",
+    "achievements.card4.title": "99.8% System Uptime",
+    "achievements.card4.text": "Maintained high availability for payment processing systems serving thousands of daily transactions.",
+    "achievements.card4.metric": "Uptime",
     "education.title": "Education",
     "education.subtitle": "Academic foundation in information technology and systems engineering.",
     "education.card1.title": "Lebanese International University (LIU)",
@@ -189,21 +202,27 @@ const translations = {
     "cta.secondary": "Connect on LinkedIn",
     "contact.title": "Contact",
     "contact.subtitle": "Let's collaborate on secure, reliable fintech systems.",
-    "contact.direct.title": "Direct",
+    "contact.direct.title": "Direct Contact",
     "contact.direct.phone1.label": "Phone:",
     "contact.direct.phone1.value": "+967 774 200 592",
     "contact.direct.phone2.label": "Phone:",
     "contact.direct.phone2.value": "+967 771 238 005",
     "contact.direct.email.label": "Email:",
     "contact.direct.email.value": "heshamaIshareef1997@gmail.com",
-    "contact.online.title": "Online",
+    "contact.direct.cta": "Send Email",
+    "contact.online.title": "Online Presence",
     "contact.online.linkedin.label": "LinkedIn:",
     "contact.online.linkedin.value": "/hisham-alshareef-91264a189",
     "contact.online.github.label": "GitHub:",
     "contact.online.github.value": "@Hisham164",
-    "contact.availability.title": "Availability",
+    "contact.online.cta": "Connect on LinkedIn",
+    "contact.availability.title": "Currently Available",
     "contact.availability.text":
       "Open to full-time, contract, and remote opportunities where backend reliability is mission-critical.",
+    "contact.availability.types.label": "Opportunity Types:",
+    "contact.availability.types.value": "Full-time, Contract, Remote",
+    "contact.availability.response.label": "Response Time:",
+    "contact.availability.response.value": "Within 24 hours",
     "footer.copy":
       "© <span id=\"year\"></span> Hisham Hashem Ali Alshareef. Built with care and precision.",
     "footer.top": "Back to top ↑"
@@ -217,6 +236,8 @@ const translations = {
     "nav.about": "نبذة",
     "nav.experience": "الخبرات",
     "nav.services": "الخدمات",
+    "nav.skills": "المهارات",
+    "nav.achievements": "الإنجازات",
     "nav.projects": "المشاريع",
     "nav.testimonials": "الشهادات",
     "nav.contact": "تواصل",
@@ -245,6 +266,9 @@ const translations = {
     "hero.metrics.1": "داعم لتدفق CI/CD",
     "hero.metrics.2": "قيّم واجهات API",
     "hero.metrics.3": "مستجيب للحوادث",
+    "hero.stat1": "% وقت التشغيل",
+    "hero.stat2": "% واجهات أسرع",
+    "hero.stat3": "x سرعة النشر",
     "hero.portraitAlt": "صورة هشام هاشم علي الشريف",
     "hero.scrollCue": "الانتقال إلى قسم الإنجازات",
     "highlights.title": "أبرز الأثر",
@@ -315,21 +339,15 @@ const translations = {
     "services.card3.bullet3": "تمكين الفريق والتوثيق",
     "skills.title": "المهارات الأساسية",
     "skills.subtitle": "أدوات وقدرات تسرع التسليم وتحافظ على استقرار الأنظمة.",
-    "skills.column1.title": "الهندسة",
-    "skills.column1.item1": "Django و Django REST Framework",
-    "skills.column1.item2": "أتمتة بايثون والبرمجة",
-    "skills.column1.item3": "تصميم وتوثيق واجهات API",
-    "skills.column1.item4": "نشر قائم على Docker",
-    "skills.column2.title": "العمليات",
-    "skills.column2.item1": "تطبيق خطوط CI/CD",
-    "skills.column2.item2": "تحليل الأداء وتحسينه",
-    "skills.column2.item3": "تحصين أمني ومواجهة التهديدات",
-    "skills.column2.item4": "إدارة الشبكات والخوادم",
-    "skills.column3.title": "التعاون",
-    "skills.column3.item1": "التوجيه التقني والتوثيق",
-    "skills.column3.item2": "التواصل مع أصحاب المصلحة",
-    "skills.column3.item3": "مواءمة الفرق متعددة التخصصات",
-    "skills.column3.item4": "حل المشكلات تحليليًا",
+    "skills.column1.title": "تطوير الأنظمة الخلفية",
+    "skills.column1.subtitle1": "الأطر واللغات",
+    "skills.column1.subtitle2": "قواعد البيانات والتخزين",
+    "skills.column2.title": "DevOps والبنية التحتية",
+    "skills.column2.subtitle1": "الحاويات والتنسيق",
+    "skills.column2.subtitle2": "CI/CD والمراقبة",
+    "skills.column3.title": "الأمان والأداء",
+    "skills.column3.subtitle1": "ممارسات الأمان",
+    "skills.column3.subtitle2": "الأداء والاختبار",
     "skills.tag1": "أتمتة العمليات (RPA)",
     "skills.tag2": "Git و GitHub",
     "skills.tag3": "Firebase",
@@ -351,6 +369,20 @@ const translations = {
       "تشخيص مشكلات التكامل بسرعة لحماية زمن تشغيل المنصة وموثوقيتها.",
     "projects.card.bullet5":
       "تحسين الأداء باستمرار وتحسين الوضع الأمني للتطبيق.",
+    "achievements.title": "الإنجازات الرئيسية",
+    "achievements.subtitle": "أثر قابل للقياس في تطوير الأنظمة الخلفية للتقنية المالية وموثوقية الأنظمة.",
+    "achievements.card1.title": "تحسين أداء واجهات API بنسبة 35%",
+    "achievements.card1.text": "تحسين واجهات Django REST والاستعلامات، تقليل زمن الاستجابة من 450ms إلى 290ms.",
+    "achievements.card1.metric": "متوسط زمن الاستجابة",
+    "achievements.card2.title": "صفر اختراقات أمنية",
+    "achievements.card2.text": "تطبيق إجراءات أمنية شاملة تشمل OAuth 2.0 ورموز JWT وتشفير البيانات.",
+    "achievements.card2.metric": "نقاط الأمان",
+    "achievements.card3.title": "نشر أسرع بـ 4 مرات",
+    "achievements.card3.text": "بناء خطوط CI/CD مع Docker و GitHub Actions، تقليل زمن النشر من ساعتين إلى 30 دقيقة.",
+    "achievements.card3.metric": "زمن النشر",
+    "achievements.card4.title": "99.8% وقت تشغيل النظام",
+    "achievements.card4.text": "الحفاظ على توفر عالي لأنظمة معالجة المدفوعات التي تخدم آلاف المعاملات اليومية.",
+    "achievements.card4.metric": "وقت التشغيل",
     "education.title": "التعليم",
     "education.subtitle": "أساس أكاديمي في تكنولوجيا المعلومات وهندسة الأنظمة.",
     "education.card1.title": "الجامعة اللبنانية الدولية (LIU)",
@@ -387,21 +419,27 @@ const translations = {
     "cta.secondary": "تواصل عبر لينكدإن",
     "contact.title": "تواصل",
     "contact.subtitle": "لننجز معًا أنظمة مالية آمنة وموثوقة.",
-    "contact.direct.title": "مباشر",
+    "contact.direct.title": "تواصل مباشر",
     "contact.direct.phone1.label": "هاتف:",
     "contact.direct.phone1.value": "+967 774 200 592",
     "contact.direct.phone2.label": "هاتف:",
     "contact.direct.phone2.value": "+967 771 238 005",
     "contact.direct.email.label": "البريد:",
     "contact.direct.email.value": "heshamaIshareef1997@gmail.com",
-    "contact.online.title": "عبر الإنترنت",
+    "contact.direct.cta": "إرسال بريد",
+    "contact.online.title": "الحضور الرقمي",
     "contact.online.linkedin.label": "لينكدإن:",
     "contact.online.linkedin.value": "/hisham-alshareef-91264a189",
     "contact.online.github.label": "جيتهاب:",
     "contact.online.github.value": "@Hisham164",
-    "contact.availability.title": "التوافر",
+    "contact.online.cta": "تواصل عبر لينكدإن",
+    "contact.availability.title": "متاح حاليًا",
     "contact.availability.text":
       "متاح لفرص دوام كامل أو جزئي أو عن بعد حيث تكون موثوقية الأنظمة الخلفية ضرورية.",
+    "contact.availability.types.label": "أنواع الفرص:",
+    "contact.availability.types.value": "دوام كامل، عقد، عن بعد",
+    "contact.availability.response.label": "زمن الاستجابة:",
+    "contact.availability.response.value": "خلال 24 ساعة",
     "footer.copy":
       "© <span id=\"year\"></span> هشام هاشم علي الشريف. صُممت بعناية ودقة.",
     "footer.top": "العودة للأعلى ↑"
@@ -506,6 +544,39 @@ const handleNavToggle = () => {
   nav.classList.toggle("open");
 };
 
+const animateCounters = () => {
+  const counters = document.querySelectorAll(".stat-number[data-count]");
+  
+  counters.forEach((counter) => {
+    const target = parseFloat(counter.dataset.count);
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16); // 60fps
+    let current = 0;
+    
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        counter.textContent = Math.floor(current);
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = target;
+      }
+    };
+    
+    // Start animation when element is in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          updateCounter();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(counter);
+  });
+};
+
 const observeAnimations = () => {
   const elements = document.querySelectorAll("[data-animate]");
   if (!elements.length) return;
@@ -578,6 +649,363 @@ const bindEvents = () => {
   });
 };
 
+const initLazyLoading = () => {
+  const images = document.querySelectorAll('img[loading="lazy"]');
+  
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add('loaded');
+          observer.unobserve(img);
+        }
+      });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+  } else {
+    // Fallback for browsers without IntersectionObserver
+    images.forEach(img => img.classList.add('loaded'));
+  }
+};
+
+const initLoadingAnimation = () => {
+  const loadingContainer = document.getElementById('loadingContainer');
+  const progressBar = document.getElementById('loadingProgressBar');
+  
+  // Simulate loading progress
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += Math.random() * 15;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(interval);
+    }
+    if (progressBar) {
+      progressBar.style.width = progress + '%';
+    }
+  }, 100);
+  
+  // Hide loading container after page load
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      if (loadingContainer) {
+        loadingContainer.style.opacity = '0';
+        setTimeout(() => {
+          loadingContainer.style.display = 'none';
+        }, 800);
+      }
+    }, 2000);
+  });
+};
+
+const initParallax = () => {
+  const parallaxElements = document.querySelectorAll('.parallax-element');
+  
+  if (parallaxElements.length === 0) return;
+  
+  const updateParallax = () => {
+    const scrolled = window.pageYOffset;
+    
+    parallaxElements.forEach((element, index) => {
+      const speed = 0.5 + (index * 0.1);
+      const yPos = -(scrolled * speed);
+      element.style.setProperty('--parallax-offset', `${yPos}px`);
+    });
+  };
+  
+  window.addEventListener('scroll', updateParallax);
+  updateParallax();
+};
+
+const initSkillProgressBars = () => {
+  const progressBars = document.querySelectorAll('.skill-progress-fill');
+  
+  if (progressBars.length === 0) return;
+  
+  const animateProgressBar = (bar) => {
+    const width = bar.dataset.width;
+    bar.style.setProperty('--skill-width', width);
+    bar.classList.add('animate');
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateProgressBar(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  progressBars.forEach(bar => observer.observe(bar));
+};
+
+const initTypingAnimation = () => {
+  const typingElement = document.querySelector('.typing-animation');
+  if (!typingElement) return;
+  
+  const text = typingElement.textContent;
+  typingElement.textContent = '';
+  typingElement.style.borderRight = '2px solid var(--color-accent)';
+  
+  let i = 0;
+  const typeWriter = () => {
+    if (i < text.length) {
+      typingElement.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+    } else {
+      // Remove cursor after typing is complete
+      setTimeout(() => {
+        typingElement.style.borderRight = 'none';
+      }, 1000);
+    }
+  };
+  
+  // Start typing animation after a delay
+  setTimeout(typeWriter, 1000);
+};
+
+const initStaggeredAnimations = () => {
+  const animatedElements = document.querySelectorAll('[data-animate]');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('in-view');
+        }, index * 100); // Stagger animations by 100ms
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  animatedElements.forEach(el => observer.observe(el));
+};
+
+const initCustomCursor = () => {
+  const cursor = document.getElementById('customCursor');
+  const cursorDot = document.getElementById('cursorDot');
+  
+  if (!cursor || !cursorDot) return;
+  
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
+  
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+  
+  const animateCursor = () => {
+    cursorX += (mouseX - cursorX) * 0.1;
+    cursorY += (mouseY - cursorY) * 0.1;
+    
+    cursor.style.left = cursorX + 'px';
+    cursor.style.top = cursorY + 'px';
+    cursorDot.style.left = mouseX + 'px';
+    cursorDot.style.top = mouseY + 'px';
+    
+    requestAnimationFrame(animateCursor);
+  };
+  
+  animateCursor();
+  
+  // Hover effects
+  const hoverElements = document.querySelectorAll('a, button, .card, .btn');
+  hoverElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.classList.add('cursor-hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.classList.remove('cursor-hover');
+    });
+  });
+};
+
+const initMouseTrail = () => {
+  const trail = [];
+  const trailLength = 20;
+  
+  for (let i = 0; i < trailLength; i++) {
+    const trailElement = document.createElement('div');
+    trailElement.className = 'mouse-trail';
+    trailElement.style.opacity = (trailLength - i) / trailLength;
+    document.body.appendChild(trailElement);
+    trail.push(trailElement);
+  }
+  
+  let mouseX = 0, mouseY = 0;
+  
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    trail.forEach((element, index) => {
+      setTimeout(() => {
+        element.style.left = mouseX + 'px';
+        element.style.top = mouseY + 'px';
+        element.style.animation = 'none';
+        element.offsetHeight; // Trigger reflow
+        element.style.animation = 'trail-fade 0.6s ease-out forwards';
+      }, index * 30);
+    });
+  });
+};
+
+const initMagneticElements = () => {
+  const magneticElements = document.querySelectorAll('.magnetic');
+  
+  magneticElements.forEach(element => {
+    element.addEventListener('mousemove', (e) => {
+      const rect = element.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      element.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+    });
+    
+    element.addEventListener('mouseleave', () => {
+      element.style.transform = 'translate(0, 0)';
+    });
+  });
+};
+
+const initRippleEffect = () => {
+  const rippleElements = document.querySelectorAll('.ripple');
+  
+  rippleElements.forEach(element => {
+    element.addEventListener('click', (e) => {
+      const ripple = document.createElement('span');
+      const rect = element.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+      ripple.classList.add('ripple-effect');
+      
+      element.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    });
+  });
+};
+
+const initMatrixRain = () => {
+  const matrixContainer = document.querySelector('.matrix-rain');
+  if (!matrixContainer) return;
+  
+  const characters = '01';
+  const columns = 20;
+  
+  for (let i = 0; i < columns; i++) {
+    const column = document.createElement('div');
+    column.className = 'matrix-column';
+    column.style.left = (i * 5) + '%';
+    column.style.animationDelay = Math.random() * 5 + 's';
+    column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    
+    let text = '';
+    for (let j = 0; j < 20; j++) {
+      text += characters[Math.floor(Math.random() * characters.length)] + ' ';
+    }
+    column.textContent = text;
+    
+    matrixContainer.appendChild(column);
+  }
+};
+
+const initNeuralNetwork = () => {
+  const neuralContainer = document.querySelector('.neural-network');
+  if (!neuralContainer) return;
+  
+  // Add more dynamic connections
+  const connections = neuralContainer.querySelectorAll('.neural-connection');
+  connections.forEach((connection, index) => {
+    connection.style.animationDelay = (index * 0.5) + 's';
+  });
+};
+
+const initQuantumField = () => {
+  const quantumContainer = document.querySelector('.quantum-field');
+  if (!quantumContainer) return;
+  
+  // Add more quantum particles dynamically
+  for (let i = 0; i < 15; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'quantum-particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 10 + 's';
+    particle.style.animationDuration = (Math.random() * 5 + 8) + 's';
+    quantumContainer.appendChild(particle);
+  }
+};
+
+const initDataStream = () => {
+  const dataContainer = document.querySelector('.data-stream');
+  if (!dataContainer) return;
+  
+  // Add more data bits
+  for (let i = 0; i < 20; i++) {
+    const bit = document.createElement('div');
+    bit.className = 'data-bit';
+    bit.style.left = Math.random() * 100 + '%';
+    bit.style.animationDelay = Math.random() * 3 + 's';
+    bit.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+    dataContainer.appendChild(bit);
+  }
+};
+
+const initEnergyField = () => {
+  const energyContainer = document.querySelector('.energy-field');
+  if (!energyContainer) return;
+  
+  // Add more energy pulses
+  for (let i = 0; i < 5; i++) {
+    const pulse = document.createElement('div');
+    pulse.className = 'energy-pulse';
+    pulse.style.top = Math.random() * 100 + '%';
+    pulse.style.left = Math.random() * 100 + '%';
+    pulse.style.animationDelay = Math.random() * 3 + 's';
+    energyContainer.appendChild(pulse);
+  }
+};
+
+const initCyberpunkEffects = () => {
+  const cyberpunkElements = document.querySelectorAll('.cyberpunk-glitch');
+  
+  cyberpunkElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+      element.style.animation = 'cyberpunk-flicker 0.1s infinite linear';
+    });
+    
+    element.addEventListener('mouseleave', () => {
+      element.style.animation = 'cyberpunk-flicker 0.15s infinite linear';
+    });
+  });
+};
+
+const initHolographicEffects = () => {
+  const holographicElements = document.querySelectorAll('.holographic');
+  
+  holographicElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+      element.style.filter = 'drop-shadow(0 0 30px #00ffff) drop-shadow(0 0 60px #ff00ff)';
+    });
+    
+    element.addEventListener('mouseleave', () => {
+      element.style.filter = 'drop-shadow(0 0 10px #00ffff) drop-shadow(0 0 20px #ff00ff)';
+    });
+  });
+};
+
 const init = () => {
   initTheme();
   const initialLang = getInitialLanguage();
@@ -585,6 +1013,24 @@ const init = () => {
   setYear();
   bindEvents();
   observeAnimations();
+  animateCounters();
+  initLazyLoading();
+  initLoadingAnimation();
+  initParallax();
+  initSkillProgressBars();
+  initTypingAnimation();
+  initStaggeredAnimations();
+  initCustomCursor();
+  initMouseTrail();
+  initMagneticElements();
+  initRippleEffect();
+  initMatrixRain();
+  initNeuralNetwork();
+  initQuantumField();
+  initDataStream();
+  initEnergyField();
+  initCyberpunkEffects();
+  initHolographicEffects();
 };
 
 init();
