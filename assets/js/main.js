@@ -786,6 +786,11 @@ const initStaggeredAnimations = () => {
 };
 
 const initCustomCursor = () => {
+  // Only initialize cursor on non-touch devices
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    return;
+  }
+  
   const cursor = document.getElementById('customCursor');
   const cursorDot = document.getElementById('cursorDot');
   
@@ -826,6 +831,11 @@ const initCustomCursor = () => {
 };
 
 const initMouseTrail = () => {
+  // Only initialize mouse trail on non-touch devices
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    return;
+  }
+  
   const trail = [];
   const trailLength = 20;
   
@@ -902,18 +912,21 @@ const initMatrixRain = () => {
   const matrixContainer = document.querySelector('.matrix-rain');
   if (!matrixContainer) return;
   
+  // Reduce intensity on mobile devices
+  const isMobile = window.innerWidth <= 768;
   const characters = '01';
-  const columns = 20;
+  const columns = isMobile ? 8 : 20;
   
   for (let i = 0; i < columns; i++) {
     const column = document.createElement('div');
     column.className = 'matrix-column';
-    column.style.left = (i * 5) + '%';
+    column.style.left = (i * (100 / columns)) + '%';
     column.style.animationDelay = Math.random() * 5 + 's';
     column.style.animationDuration = (Math.random() * 3 + 2) + 's';
     
     let text = '';
-    for (let j = 0; j < 20; j++) {
+    const textLength = isMobile ? 10 : 20;
+    for (let j = 0; j < textLength; j++) {
       text += characters[Math.floor(Math.random() * characters.length)] + ' ';
     }
     column.textContent = text;
