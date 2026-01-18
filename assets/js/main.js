@@ -216,11 +216,10 @@ const translations = {
     "contact.online.github.label": "GitHub:",
     "contact.online.github.value": "@Hisham164",
     "contact.online.cta": "Connect on LinkedIn",
-    "contact.availability.title": "Currently Available",
     "contact.availability.text":
-      "Open to full-time, contract, and remote opportunities where backend reliability is mission-critical.",
+      "Currently employed, but open to part-time, freelance, and remote opportunities where backend reliability is mission-critical.",
     "contact.availability.types.label": "Opportunity Types:",
-    "contact.availability.types.value": "Full-time, Contract, Remote",
+    "contact.availability.types.value": "Part-time, Freelance, Remote",
     "contact.availability.response.label": "Response Time:",
     "contact.availability.response.value": "Within 24 hours",
     "footer.copy":
@@ -433,11 +432,10 @@ const translations = {
     "contact.online.github.label": "جيتهاب:",
     "contact.online.github.value": "@Hisham164",
     "contact.online.cta": "تواصل عبر لينكدإن",
-    "contact.availability.title": "متاح حاليًا",
     "contact.availability.text":
-      "متاح لفرص دوام كامل أو جزئي أو عن بعد حيث تكون موثوقية الأنظمة الخلفية ضرورية.",
+      "أعمل حاليًا، لكنني متاح لفرص دوام جزئي أو عمل حر أو عن بعد حيث تكون موثوقية الأنظمة الخلفية ضرورية.",
     "contact.availability.types.label": "أنواع الفرص:",
-    "contact.availability.types.value": "دوام كامل، عقد، عن بعد",
+    "contact.availability.types.value": "دوام جزئي، عمل حر، عن بعد",
     "contact.availability.response.label": "زمن الاستجابة:",
     "contact.availability.response.value": "خلال 24 ساعة",
     "footer.copy":
@@ -546,13 +544,13 @@ const handleNavToggle = () => {
 
 const animateCounters = () => {
   const counters = document.querySelectorAll(".stat-number[data-count]");
-  
+
   counters.forEach((counter) => {
     const target = parseFloat(counter.dataset.count);
     const duration = 2000; // 2 seconds
     const increment = target / (duration / 16); // 60fps
     let current = 0;
-    
+
     const updateCounter = () => {
       current += increment;
       if (current < target) {
@@ -562,7 +560,7 @@ const animateCounters = () => {
         counter.textContent = target;
       }
     };
-    
+
     // Start animation when element is in view
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -572,7 +570,7 @@ const animateCounters = () => {
         }
       });
     }, { threshold: 0.5 });
-    
+
     observer.observe(counter);
   });
 };
@@ -651,7 +649,7 @@ const bindEvents = () => {
 
 const initLazyLoading = () => {
   const images = document.querySelectorAll('img[loading="lazy"]');
-  
+
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -662,7 +660,7 @@ const initLazyLoading = () => {
         }
       });
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
   } else {
     // Fallback for browsers without IntersectionObserver
@@ -673,7 +671,7 @@ const initLazyLoading = () => {
 const initLoadingAnimation = () => {
   const loadingContainer = document.getElementById('loadingContainer');
   const progressBar = document.getElementById('loadingProgressBar');
-  
+
   // Simulate loading progress
   let progress = 0;
   const interval = setInterval(() => {
@@ -686,7 +684,7 @@ const initLoadingAnimation = () => {
       progressBar.style.width = progress + '%';
     }
   }, 100);
-  
+
   // Hide loading container after page load
   window.addEventListener('load', () => {
     setTimeout(() => {
@@ -702,34 +700,34 @@ const initLoadingAnimation = () => {
 
 const initParallax = () => {
   const parallaxElements = document.querySelectorAll('.parallax-element');
-  
+
   if (parallaxElements.length === 0) return;
-  
+
   const updateParallax = () => {
     const scrolled = window.pageYOffset;
-    
+
     parallaxElements.forEach((element, index) => {
       const speed = 0.5 + (index * 0.1);
       const yPos = -(scrolled * speed);
       element.style.setProperty('--parallax-offset', `${yPos}px`);
     });
   };
-  
+
   window.addEventListener('scroll', updateParallax);
   updateParallax();
 };
 
 const initSkillProgressBars = () => {
   const progressBars = document.querySelectorAll('.skill-progress-fill');
-  
+
   if (progressBars.length === 0) return;
-  
+
   const animateProgressBar = (bar) => {
     const width = bar.dataset.width;
     bar.style.setProperty('--skill-width', width);
     bar.classList.add('animate');
   };
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -738,18 +736,18 @@ const initSkillProgressBars = () => {
       }
     });
   }, { threshold: 0.5 });
-  
+
   progressBars.forEach(bar => observer.observe(bar));
 };
 
 const initTypingAnimation = () => {
   const typingElement = document.querySelector('.typing-animation');
   if (!typingElement) return;
-  
+
   const text = typingElement.textContent;
   typingElement.textContent = '';
   typingElement.style.borderRight = '2px solid var(--color-accent)';
-  
+
   let i = 0;
   const typeWriter = () => {
     if (i < text.length) {
@@ -763,14 +761,14 @@ const initTypingAnimation = () => {
       }, 1000);
     }
   };
-  
+
   // Start typing animation after a delay
   setTimeout(typeWriter, 1000);
 };
 
 const initStaggeredAnimations = () => {
   const animatedElements = document.querySelectorAll('[data-animate]');
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
@@ -781,7 +779,7 @@ const initStaggeredAnimations = () => {
       }
     });
   }, { threshold: 0.1 });
-  
+
   animatedElements.forEach(el => observer.observe(el));
 };
 
@@ -790,34 +788,34 @@ const initCustomCursor = () => {
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     return;
   }
-  
+
   const cursor = document.getElementById('customCursor');
   const cursorDot = document.getElementById('cursorDot');
-  
+
   if (!cursor || !cursorDot) return;
-  
+
   let mouseX = 0, mouseY = 0;
   let cursorX = 0, cursorY = 0;
-  
+
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
-  
+
   const animateCursor = () => {
     cursorX += (mouseX - cursorX) * 0.1;
     cursorY += (mouseY - cursorY) * 0.1;
-    
+
     cursor.style.left = cursorX + 'px';
     cursor.style.top = cursorY + 'px';
     cursorDot.style.left = mouseX + 'px';
     cursorDot.style.top = mouseY + 'px';
-    
+
     requestAnimationFrame(animateCursor);
   };
-  
+
   animateCursor();
-  
+
   // Hover effects
   const hoverElements = document.querySelectorAll('a, button, .card, .btn');
   hoverElements.forEach(el => {
@@ -835,10 +833,10 @@ const initMouseTrail = () => {
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     return;
   }
-  
+
   const trail = [];
   const trailLength = 20;
-  
+
   for (let i = 0; i < trailLength; i++) {
     const trailElement = document.createElement('div');
     trailElement.className = 'mouse-trail';
@@ -846,13 +844,13 @@ const initMouseTrail = () => {
     document.body.appendChild(trailElement);
     trail.push(trailElement);
   }
-  
+
   let mouseX = 0, mouseY = 0;
-  
+
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    
+
     trail.forEach((element, index) => {
       setTimeout(() => {
         element.style.left = mouseX + 'px';
@@ -867,16 +865,16 @@ const initMouseTrail = () => {
 
 const initMagneticElements = () => {
   const magneticElements = document.querySelectorAll('.magnetic');
-  
+
   magneticElements.forEach(element => {
     element.addEventListener('mousemove', (e) => {
       const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
-      
+
       element.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
     });
-    
+
     element.addEventListener('mouseleave', () => {
       element.style.transform = 'translate(0, 0)';
     });
@@ -885,7 +883,7 @@ const initMagneticElements = () => {
 
 const initRippleEffect = () => {
   const rippleElements = document.querySelectorAll('.ripple');
-  
+
   rippleElements.forEach(element => {
     element.addEventListener('click', (e) => {
       const ripple = document.createElement('span');
@@ -893,14 +891,14 @@ const initRippleEffect = () => {
       const size = Math.max(rect.width, rect.height);
       const x = e.clientX - rect.left - size / 2;
       const y = e.clientY - rect.top - size / 2;
-      
+
       ripple.style.width = ripple.style.height = size + 'px';
       ripple.style.left = x + 'px';
       ripple.style.top = y + 'px';
       ripple.classList.add('ripple-effect');
-      
+
       element.appendChild(ripple);
-      
+
       setTimeout(() => {
         ripple.remove();
       }, 600);
@@ -911,26 +909,26 @@ const initRippleEffect = () => {
 const initMatrixRain = () => {
   const matrixContainer = document.querySelector('.matrix-rain');
   if (!matrixContainer) return;
-  
+
   // Reduce intensity on mobile devices
   const isMobile = window.innerWidth <= 768;
   const characters = '01';
   const columns = isMobile ? 8 : 20;
-  
+
   for (let i = 0; i < columns; i++) {
     const column = document.createElement('div');
     column.className = 'matrix-column';
     column.style.left = (i * (100 / columns)) + '%';
     column.style.animationDelay = Math.random() * 5 + 's';
     column.style.animationDuration = (Math.random() * 3 + 2) + 's';
-    
+
     let text = '';
     const textLength = isMobile ? 10 : 20;
     for (let j = 0; j < textLength; j++) {
       text += characters[Math.floor(Math.random() * characters.length)] + ' ';
     }
     column.textContent = text;
-    
+
     matrixContainer.appendChild(column);
   }
 };
@@ -938,7 +936,7 @@ const initMatrixRain = () => {
 const initNeuralNetwork = () => {
   const neuralContainer = document.querySelector('.neural-network');
   if (!neuralContainer) return;
-  
+
   // Add more dynamic connections
   const connections = neuralContainer.querySelectorAll('.neural-connection');
   connections.forEach((connection, index) => {
@@ -949,7 +947,7 @@ const initNeuralNetwork = () => {
 const initQuantumField = () => {
   const quantumContainer = document.querySelector('.quantum-field');
   if (!quantumContainer) return;
-  
+
   // Add more quantum particles dynamically
   for (let i = 0; i < 15; i++) {
     const particle = document.createElement('div');
@@ -964,7 +962,7 @@ const initQuantumField = () => {
 const initDataStream = () => {
   const dataContainer = document.querySelector('.data-stream');
   if (!dataContainer) return;
-  
+
   // Add more data bits
   for (let i = 0; i < 20; i++) {
     const bit = document.createElement('div');
@@ -979,7 +977,7 @@ const initDataStream = () => {
 const initEnergyField = () => {
   const energyContainer = document.querySelector('.energy-field');
   if (!energyContainer) return;
-  
+
   // Add more energy pulses
   for (let i = 0; i < 5; i++) {
     const pulse = document.createElement('div');
@@ -993,12 +991,12 @@ const initEnergyField = () => {
 
 const initCyberpunkEffects = () => {
   const cyberpunkElements = document.querySelectorAll('.cyberpunk-glitch');
-  
+
   cyberpunkElements.forEach(element => {
     element.addEventListener('mouseenter', () => {
       element.style.animation = 'cyberpunk-flicker 0.1s infinite linear';
     });
-    
+
     element.addEventListener('mouseleave', () => {
       element.style.animation = 'cyberpunk-flicker 0.15s infinite linear';
     });
@@ -1007,12 +1005,12 @@ const initCyberpunkEffects = () => {
 
 const initHolographicEffects = () => {
   const holographicElements = document.querySelectorAll('.holographic');
-  
+
   holographicElements.forEach(element => {
     element.addEventListener('mouseenter', () => {
       element.style.filter = 'drop-shadow(0 0 30px #00ffff) drop-shadow(0 0 60px #ff00ff)';
     });
-    
+
     element.addEventListener('mouseleave', () => {
       element.style.filter = 'drop-shadow(0 0 10px #00ffff) drop-shadow(0 0 20px #ff00ff)';
     });
