@@ -19,22 +19,22 @@
 }
 
 body.theme-dark {
-  --bg-body: #0b1220;
-  --color-surface: #101a2c;
-  --color-surface-elevated: rgba(15, 23, 42, 0.75);
-  --color-surface-alt: rgba(26, 35, 58, 0.65);
+  --bg-body: #0b1121; /* Deep slate instead of pure black */
+  --color-surface: rgba(16, 26, 44, 0.6); /* Translucent surface for glass effect */
+  --color-surface-elevated: rgba(16, 26, 44, 0.85);
+  --color-surface-alt: rgba(30, 41, 59, 0.5);
   --color-text-primary: #f8fafc;
-  --color-text-secondary: #cbd5f5;
-  --color-text-tertiary: #94a3b8;
-  --color-accent: #60a5fa;
-  --color-accent-strong: #3b82f6;
-  --color-accent-soft: rgba(96, 165, 250, 0.14);
-  --color-border: rgba(148, 163, 184, 0.2);
-  --shadow-soft: 0 30px 60px rgba(2, 6, 23, 0.55);
-  --shadow-strong: 0 50px 90px rgba(2, 6, 23, 0.75);
-  --gradient-cta: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-  --gradient-hero: radial-gradient(circle at top right, rgba(37, 99, 235, 0.25), transparent 50%),
-                   radial-gradient(circle at bottom left, rgba(13, 148, 136, 0.22), transparent 50%);
+  --color-text-secondary: #94a3b8;
+  --color-text-tertiary: #64748b;
+  --color-accent: #06b6d4; /* Vibrant Cyan */
+  --color-accent-strong: #0891b2;
+  --color-accent-soft: rgba(6, 182, 212, 0.15);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --gradient-cta: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  --gradient-hero: radial-gradient(circle at top right, rgba(6, 182, 212, 0.15), transparent 50%),
+                   radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.15), transparent 50%);
 }
 
 *,
@@ -1508,13 +1508,21 @@ body.theme-dark .theme-icon.moon {
 
 .card {
   background: var(--color-surface);
-  padding: 1.9rem;
-  border-radius: 24px;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--color-border);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(12px); /* Glassmorphism */
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--color-accent-soft);
 }
 
 .card::before {
